@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     private Vector3 targetPosition;
     private float distance;
 
-	void Update () {
+	void FixedUpdate () {
 
         if (followPlayer) { 
             //Follow player over x-axis
