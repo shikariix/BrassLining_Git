@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
 
+    //Variables related to motion
     private enum Direction {
         Up,
         Down,
@@ -13,62 +14,66 @@ public class Block : MonoBehaviour {
     }
     private Direction direction;
     private bool isMoving = false;
-
     private Vector3 newRotation;
     private Vector3 oldPosition;
     private Vector3 newPosition;
     private float step = 0;
 
-    private Vector3 playerPosition;
+
+    //Variables related to pushing mechanic
+    private GameObject player;
+    private float distance;
     private Vector3 dist;
 
-    public Rigidbody rb;
-    public Beam beam;
+    //Variables related to beam bending
+    private Beam beam;
 
-    public float force;
-    
-    void Start() {
+    void OnEnable() {
+        player = GameObject.FindWithTag("Player");
+        beam = GameObject.FindWithTag("Beam").GetComponent<Beam>();
         newPosition = transform.position;
         oldPosition = transform.position;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
         if (isMoving) {
             transform.Rotate(newRotation, Space.World);
-            step += 0.03f;
+            if (step < 1) { 
+                step += 0.05f;
+            } else {
+                step = 1;
+            }
             transform.position = Vector3.Lerp(oldPosition, newPosition, step);
         } else {
             step = 0;
+
+        }
+
+        distance = Vector3.Distance(transform.position, player.transform.position);
+        if (distance < 1.2) {
+            AllowBlockPushing();
         }
     }
     
-    void OnTriggerStay(Collider col) {
-        try { 
-            //set the direction based on position of player
-            if (col.tag == "Player") { 
-                dist = (transform.position - col.transform.position).normalized;
-                Debug.Log(dist);
+    void AllowBlockPushing() {
+        //set the direction based on position of player
+        dist = (transform.position - player.transform.position).normalized;
 
-                if (Input.GetButtonDown("Fire1") && !isMoving) {
-                    isMoving = true;
-                    if (dist.z < 0 && dist.x < 0.5f && dist.x > -0.5f) {
-                        StartCoroutine(Move(Direction.Down));
-                    }
-                    else if (dist.z > 0 && dist.x < 0.5f && dist.x > -0.5f) {
-                        StartCoroutine(Move(Direction.Up));
-                    }
-                    else if (dist.x > 0 && dist.z < 0.5f && dist.z > -0.5f) {
-                        StartCoroutine(Move(Direction.Right));
-                    }
-                    else if (dist.x < 0 && dist.z < 0.5f && dist.z > -0.5f) {
-                        StartCoroutine(Move(Direction.Left));
-                    }
-                }
+        if (Input.GetButtonDown("Fire1") && !isMoving) {
+            isMoving = true;
+            if (dist.z < 0 && dist.x < 0.5f && dist.x > -0.5f) {
+                StartCoroutine(Move(Direction.Down));
             }
-        } catch(Exception e) {
-            Debug.Log("Collision exception caught.");
+            else if (dist.z > 0 && dist.x < 0.5f && dist.x > -0.5f) {
+                StartCoroutine(Move(Direction.Up));
+            }
+            else if (dist.x > 0 && dist.z < 0.5f && dist.z > -0.5f) {
+                StartCoroutine(Move(Direction.Right));
+            }
+            else if (dist.x < 0 && dist.z < 0.5f && dist.z > -0.5f) {
+                StartCoroutine(Move(Direction.Left));
+            }
         }
     }
 
@@ -97,7 +102,6 @@ public class Block : MonoBehaviour {
                 break;
         }
 
-        beam.UpdateBeam();
         yield return new WaitForSeconds(0.5f);
         isMoving = false;
 
@@ -109,5 +113,6 @@ public class Block : MonoBehaviour {
         float zRotation = transform.eulerAngles.z;
         zRotation = Mathf.Round(zRotation / 90) * 90;
         transform.eulerAngles = new Vector3(xRotation, yRotation, zRotation);
+        beam.UpdateBeam();
     }
 }
