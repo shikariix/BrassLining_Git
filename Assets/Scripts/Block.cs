@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,10 @@ public class Block : MonoBehaviour {
     private Vector3 oldPosition;
     private Vector3 newPosition;
     private float step = 0;
-    
+
+    private Vector3 playerPosition;
+    private Vector3 dist;
+
     public Rigidbody rb;
     public Beam beam;
 
@@ -30,21 +34,6 @@ public class Block : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        //set the direction
-		if (Input.GetKeyDown(KeyCode.W) && !isMoving) {
-            isMoving = true;
-            StartCoroutine(Move(Direction.Up));
-        } else if (Input.GetKeyDown(KeyCode.A) && !isMoving) {
-            isMoving = true;
-            StartCoroutine(Move(Direction.Left));
-        } else if (Input.GetKeyDown(KeyCode.S) && !isMoving) {
-            isMoving = true;
-            StartCoroutine(Move(Direction.Down));
-        } else if (Input.GetKeyDown(KeyCode.D) && !isMoving) {
-            isMoving = true;
-            StartCoroutine(Move(Direction.Right));
-        }
-
 
         if (isMoving) {
             transform.Rotate(newRotation, Space.World);
@@ -52,6 +41,34 @@ public class Block : MonoBehaviour {
             transform.position = Vector3.Lerp(oldPosition, newPosition, step);
         } else {
             step = 0;
+        }
+    }
+    
+    void OnTriggerStay(Collider col) {
+        try { 
+            //set the direction based on position of player
+            if (col.tag == "Player") { 
+                dist = (transform.position - col.transform.position).normalized;
+                Debug.Log(dist);
+
+                if (Input.GetButtonDown("Fire1") && !isMoving) {
+                    isMoving = true;
+                    if (dist.z < 0 && dist.x < 0.5f && dist.x > -0.5f) {
+                        StartCoroutine(Move(Direction.Down));
+                    }
+                    else if (dist.z > 0 && dist.x < 0.5f && dist.x > -0.5f) {
+                        StartCoroutine(Move(Direction.Up));
+                    }
+                    else if (dist.x > 0 && dist.z < 0.5f && dist.z > -0.5f) {
+                        StartCoroutine(Move(Direction.Right));
+                    }
+                    else if (dist.x < 0 && dist.z < 0.5f && dist.z > -0.5f) {
+                        StartCoroutine(Move(Direction.Left));
+                    }
+                }
+            }
+        } catch(Exception e) {
+            Debug.Log("Collision exception caught.");
         }
     }
 
