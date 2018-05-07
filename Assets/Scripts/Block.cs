@@ -28,11 +28,17 @@ public class Block : MonoBehaviour {
     //Variables related to beam bending
     private Beam beam;
 
+	//Audio variables
+	private AudioSource audio;
+
     void OnEnable() {
         player = GameObject.FindWithTag("Player");
         beam = GameObject.FindWithTag("Beam").GetComponent<Beam>();
         newPosition = transform.position;
         oldPosition = transform.position;
+
+		//Set audio source
+		audio = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -102,8 +108,33 @@ public class Block : MonoBehaviour {
                 break;
         }
 
+
         yield return new WaitForSeconds(0.5f);
         isMoving = false;
+
+		/*
+		//pick 1 of 4 random generated noises
+		int randomSound = UnityEngine.Random.Range(0, 4);
+		switch (randomSound) {
+		case 0:
+			audio.audioClip.name = "block 1";
+			break;
+		case 1:
+			audio.audioClip.name = "block 2";
+			break;
+		case 2:
+			audio.audioClip.name = "block 3";
+			break;
+		case 3: 
+			audio.audioClip.name = "block 4";
+			break;
+		default:
+			audio.audioClip.name = "block 1";
+			break;
+		}*/
+
+		//make some noise
+		audio.Play();
 
         //snap rotation
         float xRotation = transform.eulerAngles.x;
