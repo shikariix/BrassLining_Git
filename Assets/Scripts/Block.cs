@@ -20,6 +20,11 @@ public class Block : MonoBehaviour {
     private float step = 0;
 
 
+    private bool meshStepTurn = false;
+    private float meshStep = 0;
+    private Transform meshTransform;
+
+
     //Variables related to pushing mechanic
     private GameObject player;
     private float distance;
@@ -29,16 +34,20 @@ public class Block : MonoBehaviour {
     private Beam beam;
 
 	//Audio variables
-	private AudioSource audio;
+	private AudioSource aud;
 
     void OnEnable() {
+        //this is bad. don't do this
         player = GameObject.FindWithTag("Player");
         beam = GameObject.FindWithTag("Beam").GetComponent<Beam>();
+        Transform[] t = GetComponentsInChildren<Transform>();
+        meshTransform = t[1];
+
         newPosition = transform.position;
         oldPosition = transform.position;
 
 		//Set audio source
-		audio = GetComponent<AudioSource>();
+		aud = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -51,9 +60,21 @@ public class Block : MonoBehaviour {
                 step = 1;
             }
             transform.position = Vector3.Lerp(oldPosition, newPosition, step);
+
+            if (!meshStepTurn) {
+                meshStep += 0.025f;
+            } else {
+                meshStep -= 0.025f;
+            }
+            if (meshStep > 0.3f) {
+                meshStepTurn = true;
+            } else if (meshStep < 0) {
+                meshStepTurn = false;
+            };
+            meshTransform.position = Vector3.Lerp(transform.position + Vector3.zero, transform.position + Vector3.up, meshStep);
         } else {
             step = 0;
-
+            meshTransform.localPosition = Vector3.zero;
         }
 
         distance = Vector3.Distance(transform.position, player.transform.position);
@@ -134,7 +155,7 @@ public class Block : MonoBehaviour {
 		}*/
 
 		//make some noise
-		audio.Play();
+		aud.Play();
 
         //snap rotation
         float xRotation = transform.eulerAngles.x;
