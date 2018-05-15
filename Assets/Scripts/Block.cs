@@ -29,6 +29,7 @@ public class Block : MonoBehaviour {
     private GameObject player;
     private float distance;
     private Vector3 dist;
+    float quarterPi = Mathf.PI / 4;
 
     //Variables related to beam bending
     private Beam beam;
@@ -74,32 +75,34 @@ public class Block : MonoBehaviour {
             meshTransform.position = Vector3.Lerp(transform.position + Vector3.zero, transform.position + Vector3.up, meshStep);
         } else {
             step = 0;
+            meshStep = 0;
             meshTransform.localPosition = Vector3.zero;
-        }
 
-        distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance < 1.2) {
-            AllowBlockPushing();
+            distance = Vector3.Distance(transform.position, player.transform.position);
+            if (distance < 1.2) {
+                AllowBlockPushing();
+            }
         }
     }
     
     void AllowBlockPushing() {
         //set the direction based on position of player
-        dist = (transform.position - player.transform.position).normalized;
-
+        dist = (transform.position - player.transform.position);
+        
+        float distaTan = Mathf.Atan2(dist.x, dist.z);
         if (Input.GetButtonDown("Fire1") && !isMoving) {
             isMoving = true;
-            if (dist.z < 0 && dist.x < 0.5f && dist.x > -0.5f) {
-                StartCoroutine(Move(Direction.Down));
-            }
-            else if (dist.z > 0 && dist.x < 0.5f && dist.x > -0.5f) {
+            if (distaTan < quarterPi && distaTan > -quarterPi) {
                 StartCoroutine(Move(Direction.Up));
             }
-            else if (dist.x > 0 && dist.z < 0.5f && dist.z > -0.5f) {
+            else if (distaTan < -quarterPi && distaTan > -(quarterPi * 3)) {
+                StartCoroutine(Move(Direction.Left));
+            }
+            else if (distaTan < quarterPi * 3 && distaTan > quarterPi) {
                 StartCoroutine(Move(Direction.Right));
             }
-            else if (dist.x < 0 && dist.z < 0.5f && dist.z > -0.5f) {
-                StartCoroutine(Move(Direction.Left));
+            else {
+                StartCoroutine(Move(Direction.Down));
             }
         }
     }
@@ -132,27 +135,6 @@ public class Block : MonoBehaviour {
 
         yield return new WaitForSeconds(0.5f);
         isMoving = false;
-
-		/*
-		//pick 1 of 4 random generated noises
-		int randomSound = UnityEngine.Random.Range(0, 4);
-		switch (randomSound) {
-		case 0:
-			audio.audioClip.name = "block 1";
-			break;
-		case 1:
-			audio.audioClip.name = "block 2";
-			break;
-		case 2:
-			audio.audioClip.name = "block 3";
-			break;
-		case 3: 
-			audio.audioClip.name = "block 4";
-			break;
-		default:
-			audio.audioClip.name = "block 1";
-			break;
-		}*/
 
 		//make some noise
 		aud.Play();
