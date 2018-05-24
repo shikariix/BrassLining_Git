@@ -25,14 +25,15 @@ public class Block : MonoBehaviour {
     private Transform meshTransform;
 
 
-    //Variables related to pushing mechanic
-    private GameObject player;
-    private float distance;
+	//Variables related to pushing mechanic
+	private GameObject player;
+	private Animator playerAnimator;
+	private float distance;
     private Vector3 dist;
-    float quarterPi = Mathf.PI / 4;
+	float quarterPi = Mathf.PI / 4;
 
-    //Variables related to beam bending
-    private Beam beam;
+	//Variables related to beam bending
+	private Beam beam;
 
 	//Audio variables
 	private AudioSource aud;
@@ -49,7 +50,10 @@ public class Block : MonoBehaviour {
 
 		//Set audio source
 		aud = GetComponent<AudioSource>();
-    }
+
+		//Find player animator
+		playerAnimator = player.GetComponent<Animator>();
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {

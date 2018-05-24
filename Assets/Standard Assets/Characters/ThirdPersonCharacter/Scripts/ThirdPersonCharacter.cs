@@ -56,6 +56,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_TurnAmount = Mathf.Atan2(move.x, move.z);
 			m_ForwardAmount = move.z;
 
+			//JOSIEN'S CODE
+			m_Rigidbody.velocity = transform.forward * move.z;
+			//END OF JOSIEN'S CODE
+
 			ApplyExtraTurnRotation();
 
 			// control and velocity handling is different when grounded and airborne:
@@ -134,6 +138,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				Mathf.Repeat(
 					m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + m_RunCycleLegOffset, 1);
 			float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
+
+			//JOSIEN'S CODE
+			m_Animator.SetBool("IsWalking", (m_ForwardAmount != 0));
+			//END OF JOSIEN'S CODE
+
 			if (m_IsGrounded)
 			{
 				m_Animator.SetFloat("JumpLeg", jumpLeg);
