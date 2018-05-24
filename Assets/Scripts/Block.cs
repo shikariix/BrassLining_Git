@@ -18,7 +18,7 @@ public class Block : MonoBehaviour {
     private Vector3 oldPosition;
     private Vector3 newPosition;
     private float step = 0;
-
+    private BlockGrid grid;
 
     private bool meshStepTurn = false;
     private float meshStep = 0;
@@ -42,6 +42,7 @@ public class Block : MonoBehaviour {
         //this is bad. don't do this
         player = GameObject.FindWithTag("Player");
         beam = GameObject.FindWithTag("Beam").GetComponent<Beam>();
+        grid = GameObject.FindWithTag("BlockGrid").GetComponent<BlockGrid>();
         Transform[] t = GetComponentsInChildren<Transform>();
         meshTransform = t[1];
 
@@ -95,7 +96,6 @@ public class Block : MonoBehaviour {
         
         float distaTan = Mathf.Atan2(dist.x, dist.z);
         if (Input.GetButtonDown("Fire1") && !isMoving) {
-            isMoving = true;
             if (distaTan < quarterPi && distaTan > -quarterPi) {
                 StartCoroutine(Move(Direction.Up));
             }
@@ -136,21 +136,24 @@ public class Block : MonoBehaviour {
                 break;
         }
 
+        if (!grid.borders.Contains(newPosition)) {
+            isMoving = true;
+            yield return new WaitForSeconds(0.5f);
+            isMoving = false;
 
-        yield return new WaitForSeconds(0.5f);
-        isMoving = false;
+		    //make some noise
+		    aud.Play();
 
-		//make some noise
-		aud.Play();
-
-        //snap rotation
-        float xRotation = transform.eulerAngles.x;
-        xRotation = Mathf.Round(xRotation / 90) * 90;
-        float yRotation = transform.eulerAngles.y;
-        yRotation = Mathf.Round(yRotation / 90) * 90;
-        float zRotation = transform.eulerAngles.z;
-        zRotation = Mathf.Round(zRotation / 90) * 90;
-        transform.eulerAngles = new Vector3(xRotation, yRotation, zRotation);
-        beam.UpdateBeam();
+            //snap rotation
+            float xRotation = transform.eulerAngles.x;
+            xRotation = Mathf.Round(xRotation / 90) * 90;
+            float yRotation = transform.eulerAngles.y;
+            yRotation = Mathf.Round(yRotation / 90) * 90;
+            float zRotation = transform.eulerAngles.z;
+            zRotation = Mathf.Round(zRotation / 90) * 90;
+            transform.eulerAngles = new Vector3(xRotation, yRotation, zRotation);
+            beam.UpdateBeam();
+            grid.UpdateList();
+        }
     }
 }
