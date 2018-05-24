@@ -136,7 +136,9 @@ public class Block : MonoBehaviour {
                 break;
         }
 
-        if (!grid.borders.Contains(newPosition)) {
+		playerAnimator.SetTrigger("PushBlock");
+
+		if (!grid.borders.Contains(newPosition)) {
             isMoving = true;
             yield return new WaitForSeconds(0.5f);
             isMoving = false;
