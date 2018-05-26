@@ -1,20 +1,24 @@
 fileFormatVersion: 2
-guid: 2d98454632156b646a2af2523dd29995
-timeCreated: 1525350757
+guid: 450fc9a3e4521b24995d3c3468f28ca0
+timeCreated: 1527331130
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Pipe_Bend_Low
+    100002: //RootNode
+    400000: Pipe_Bend_Low
+    400002: //RootNode
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: puzzle01_walls_Low1
+    2300000: Pipe_Bend_Low
+    2300002: //RootNode
+    3300000: Pipe_Bend_Low
+    3300002: //RootNode
+    4300000: Pipe_Bend_Low
     9500000: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -61,7 +65,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

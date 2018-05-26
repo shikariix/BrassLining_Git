@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 2d98454632156b646a2af2523dd29995
-timeCreated: 1525350757
+guid: 7c5803486dc50164bb5d1dfb52965a26
+timeCreated: 1527322871
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,11 +10,11 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: puzzle01_walls_Low1
+    4300000: puzzle_floor_Low
     9500000: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -61,7 +61,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

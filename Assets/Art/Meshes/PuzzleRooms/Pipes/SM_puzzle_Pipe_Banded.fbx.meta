@@ -1,21 +1,24 @@
 fileFormatVersion: 2
-guid: 5008fba439e53eb44ae0aefe2fc4c926
-timeCreated: 1525342906
+guid: 821fb1b553d9cfc46b1674547bcc4a0c
+timeCreated: 1527331131
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Pipe_Banded_Low
+    100002: //RootNode
+    400000: Pipe_Banded_Low
+    400002: //RootNode
     2100000: lambert1
-    2100002: Transparent
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: beamSource_low2
+    2300000: Pipe_Banded_Low
+    2300002: //RootNode
+    3300000: Pipe_Banded_Low
+    3300002: //RootNode
+    4300000: Pipe_Banded_Low
     9500000: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -62,13 +65,13 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
