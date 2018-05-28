@@ -1,0 +1,246 @@
+fileFormatVersion: 2
+guid: 19cfdd67acd6d68408b04f49dfc3dd43
+timeCreated: 1527423333
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 1
+    100002: 3
+    100004: Box001
+    100006: Box012
+    100008: Box013
+    100010: Cone001
+    100012: Cylinder001
+    100014: Cylinder002
+    100016: Cylinder003
+    100018: Cylinder005
+    100020: Cylinder006
+    100022: Cylinder007
+    100024: Cylinder008
+    100026: Cylinder009
+    100028: Cylinder010
+    100030: Cylinder011
+    100032: Cylinder012
+    100034: Cylinder013
+    100036: Line007
+    100038: Line028
+    100040: Line029
+    100042: //RootNode
+    100044: Node_0000022199B73B80
+    100046: Object001
+    100048: Object005
+    100050: Shape001
+    100052: Tube001
+    400000: 1
+    400002: 3
+    400004: Box001
+    400006: Box012
+    400008: Box013
+    400010: Cone001
+    400012: Cylinder001
+    400014: Cylinder002
+    400016: Cylinder003
+    400018: Cylinder005
+    400020: Cylinder006
+    400022: Cylinder007
+    400024: Cylinder008
+    400026: Cylinder009
+    400028: Cylinder010
+    400030: Cylinder011
+    400032: Cylinder012
+    400034: Cylinder013
+    400036: Line007
+    400038: Line028
+    400040: Line029
+    400042: //RootNode
+    400044: Node_0000022199B73B80
+    400046: Object001
+    400048: Object005
+    400050: Shape001
+    400052: Tube001
+    2100000: MidCase
+    2100002: Screen
+    2100004: Pins
+    2100006: Volume
+    2100008: Standardmaterial
+    2100010: LeftDecor
+    2100012: Rotor
+    2100014: Gramplastine
+    2100016: Pipe01
+    2100018: Horn
+    2100020: Tor
+    2100022: HornEnd
+    2100024: zzz
+    2100026: PipeHolder
+    2100028: Compressor
+    2100030: Screw
+    2100032: Phonograph
+    2100034: Nail
+    2100036: Pipe02
+    2100038: Screw2
+    2100040: Radiator
+    2100042: Output
+    2100044: VishckaPooshckaGodnota
+    2100046: TopCase
+    2100048: LowCase
+    2100050: VolControl
+    2300000: 1
+    2300002: 3
+    2300004: Box001
+    2300006: Box012
+    2300008: Box013
+    2300010: Cone001
+    2300012: Cylinder001
+    2300014: Cylinder002
+    2300016: Cylinder003
+    2300018: Cylinder005
+    2300020: Cylinder006
+    2300022: Cylinder007
+    2300024: Cylinder008
+    2300026: Cylinder009
+    2300028: Cylinder010
+    2300030: Cylinder011
+    2300032: Cylinder012
+    2300034: Cylinder013
+    2300036: Line007
+    2300038: Line028
+    2300040: Line029
+    2300042: Node_0000022199B73B80
+    2300044: Object001
+    2300046: Object005
+    2300048: Shape001
+    2300050: Tube001
+    3300000: 1
+    3300002: 3
+    3300004: Box001
+    3300006: Box012
+    3300008: Box013
+    3300010: Cone001
+    3300012: Cylinder001
+    3300014: Cylinder002
+    3300016: Cylinder003
+    3300018: Cylinder005
+    3300020: Cylinder006
+    3300022: Cylinder007
+    3300024: Cylinder008
+    3300026: Cylinder009
+    3300028: Cylinder010
+    3300030: Cylinder011
+    3300032: Cylinder012
+    3300034: Cylinder013
+    3300036: Line007
+    3300038: Line028
+    3300040: Line029
+    3300042: Node_0000022199B73B80
+    3300044: Object001
+    3300046: Object005
+    3300048: Shape001
+    3300050: Tube001
+    4300000: Cylinder001
+    4300002: Box001
+    4300004: Cylinder002
+    4300006: Cylinder003
+    4300008: Cylinder005
+    4300010: Line007
+    4300012: Cylinder006
+    4300014: Cylinder007
+    4300016: Line028
+    4300018: Node_0000022199B73B80
+    4300020: Shape001
+    4300022: Cone001
+    4300024: Box012
+    4300026: Object001
+    4300028: Tube001
+    4300030: Cylinder008
+    4300032: Cylinder009
+    4300034: Cylinder010
+    4300036: Line029
+    4300038: Cylinder011
+    4300040: Box013
+    4300042: Cylinder012
+    4300044: Object005
+    4300046: 1
+    4300048: 3
+    4300050: Cylinder013
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
