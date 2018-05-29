@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour {
 
-    public GameObject barrier;
+    public Elevator elevator;
 
     private bool isHit = false;
 
@@ -23,6 +23,6 @@ public class Target : MonoBehaviour {
     }
 
     void RemoveBarrier() {
-        barrier.SetActive(false);
+        elevator.OpenFence();
     }
 }
