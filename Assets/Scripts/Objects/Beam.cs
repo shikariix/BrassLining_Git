@@ -39,10 +39,9 @@ public class Beam : MonoBehaviour {
 
             if (Physics.Raycast(lastLaserPosition, laserDirection, out hit, laserDistance) && hit.collider.tag == "MirrorBlock") {
                 laserReflected++;
-                vertexCounter += 3;
+                vertexCounter += 2;
                 laserRenderer.positionCount = vertexCounter;
-                laserRenderer.SetPosition(vertexCounter - 3, Vector3.MoveTowards(hit.point, lastLaserPosition, 0.01f));
-                laserRenderer.SetPosition(vertexCounter - 2, hit.point);
+                laserRenderer.SetPosition(vertexCounter - 2, Vector3.MoveTowards(hit.point, lastLaserPosition, 0.01f));
                 laserRenderer.SetPosition(vertexCounter - 1, hit.point);
                 lastLaserPosition = hit.point;
                 laserDirection = Vector3.Reflect(laserDirection, hit.normal);
@@ -68,7 +67,7 @@ public class Beam : MonoBehaviour {
                     target.HitTarget();
                     target = null;
                 } catch (Exception e) {
-                    Debug.Log("No available target.");
+                    Debug.Log("Didn't hit target yet - keep trying.");
                 }
 
                 loopActive = false;

@@ -82,20 +82,16 @@ public class Block : MonoBehaviour {
             step = 0;
             meshStep = 0;
             meshTransform.localPosition = Vector3.zero;
-
-            distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance < 1.2) {
-                AllowBlockPushing();
-            }
+            
         }
     }
     
-    void AllowBlockPushing() {
+    public void AllowBlockPushing() {
         //set the direction based on position of player
         dist = (transform.position - player.transform.position);
         
         float distaTan = Mathf.Atan2(dist.x, dist.z);
-        if (Input.GetButtonDown("Fire1") && !isMoving) {
+        if (!isMoving) {
             if (distaTan < quarterPi && distaTan > -quarterPi) {
                 StartCoroutine(Move(Direction.Up));
             }
