@@ -13,6 +13,10 @@ public class SceneController : MonoBehaviour {
         SceneManager.LoadScene("Captains_Room");
     }
 
+    public void Library() {
+        SceneManager.LoadScene("Library");
+    }
+
     public void Puzzle_1() {
         SceneManager.LoadScene("Puzzle_1");
     }
