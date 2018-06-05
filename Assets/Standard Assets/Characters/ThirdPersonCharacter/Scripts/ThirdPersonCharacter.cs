@@ -57,7 +57,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_ForwardAmount = move.z;
 
 			//JOSIEN'S CODE
-			m_Rigidbody.velocity = transform.forward * move.z;
+			m_Rigidbody.velocity = transform.forward * move.z * m_MoveSpeedMultiplier;
 			//END OF JOSIEN'S CODE
 
 			ApplyExtraTurnRotation();
@@ -141,6 +141,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			//JOSIEN'S CODE
 			m_Animator.SetBool("IsWalking", (m_ForwardAmount != 0));
+			m_Animator.SetFloat("WalkingSpeed", m_ForwardAmount * m_MoveSpeedMultiplier);
 			//END OF JOSIEN'S CODE
 
 			//if (m_IsGrounded)
