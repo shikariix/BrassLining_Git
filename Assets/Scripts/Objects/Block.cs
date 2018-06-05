@@ -35,8 +35,8 @@ public class Block : MonoBehaviour {
 	//Variables related to beam bending
 	private Beam beam;
 
-	//Audio variables
-	private AudioSource aud;
+    //Audio variables
+    private PlayerAudio aud;
 
     void OnEnable() {
         //this is bad. don't do this
@@ -50,7 +50,7 @@ public class Block : MonoBehaviour {
         oldPosition = transform.position;
 
 		//Set audio source
-		aud = GetComponent<AudioSource>();
+		aud = GetComponent<PlayerAudio>();
 
 		//Find player animator
 		playerAnimator = player.GetComponent<Animator>();
@@ -140,7 +140,7 @@ public class Block : MonoBehaviour {
             isMoving = false;
 
 		    //make some noise
-		    aud.Play();
+		    aud.StepSound();
 
             //snap rotation
             float xRotation = transform.eulerAngles.x;
