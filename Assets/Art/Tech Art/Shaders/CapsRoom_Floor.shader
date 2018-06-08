@@ -1,17 +1,15 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-3641-OUT,spec-358-OUT,gloss-1813-OUT,normal-1623-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-1244-OUT,B-428-RGB;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:1837,x:30948,y:32657,varname:node_1837,prsc:2;n:type:ShaderForge.SFN_Append,id:6067,x:31124,y:32518,varname:node_6067,prsc:2|A-1837-Y,B-1837-Z;n:type:ShaderForge.SFN_Append,id:3843,x:31124,y:32657,varname:node_3843,prsc:2|A-1837-X,B-1837-Z;n:type:ShaderForge.SFN_Append,id:4248,x:31124,y:32791,varname:node_4248,prsc:2|A-1837-X,B-1837-Y;n:type:ShaderForge.SFN_Tex2d,id:4557,x:31347,y:32166,varname:node_4557,prsc:2,ntxv:0,isnm:False|UVIN-6067-OUT,TEX-2081-TEX;n:type:ShaderForge.SFN_Tex2d,id:3362,x:31347,y:32364,varname:node_3362,prsc:2,ntxv:0,isnm:False|UVIN-3843-OUT,TEX-2081-TEX;n:type:ShaderForge.SFN_Tex2d,id:6729,x:31347,y:32560,varname:node_6729,prsc:2,ntxv:0,isnm:False|UVIN-4248-OUT,TEX-2081-TEX;n:type:ShaderForge.SFN_Color,id:428,x:31935,y:32830,ptovrint:False,ptlb:Multiply Colour,ptin:_MultiplyColour,varname:node_428,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:1,c2:1,c3:1,c4:1;n:type:ShaderForge.SFN_Tex2dAsset,id:2081,x:31124,y:32349,ptovrint:False,ptlb:Albedo Texture,ptin:_AlbedoTexture,varname:node_2081,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_ChannelBlend,id:1244,x:31601,y:32364,varname:node_1244,prsc:2,chbt:0|M-6223-OUT,R-4557-RGB,G-3362-RGB,B-6729-RGB;n:type:ShaderForge.SFN_NormalVector,id:6122,x:31284,y:32705,prsc:2,pt:False;n:type:ShaderForge.SFN_Abs,id:4594,x:31441,y:32705,varname:node_4594,prsc:2|IN-6122-OUT;n:type:ShaderForge.SFN_Multiply,id:6223,x:31606,y:32705,varname:node_6223,prsc:2|A-4594-OUT,B-4594-OUT;n:type:ShaderForge.SFN_Tex2dAsset,id:5072,x:31124,y:32962,ptovrint:False,ptlb:Normal Map,ptin:_NormalMap,varname:node_5072,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:942,x:31347,y:33023,varname:node_942,prsc:2,ntxv:0,isnm:False|TEX-5072-TEX;n:type:ShaderForge.SFN_Tex2d,id:9951,x:31347,y:32876,varname:node_9951,prsc:2,ntxv:0,isnm:False|TEX-5072-TEX;n:type:ShaderForge.SFN_Tex2d,id:7702,x:31347,y:33171,varname:node_7702,prsc:2,ntxv:0,isnm:False|TEX-5072-TEX;n:type:ShaderForge.SFN_ChannelBlend,id:1925,x:31610,y:33012,varname:node_1925,prsc:2,chbt:0|M-6223-OUT,R-9951-RGB,G-942-RGB,B-7702-RGB;n:type:ShaderForge.SFN_Slider,id:3023,x:31797,y:33188,ptovrint:False,ptlb:Normal Strength,ptin:_NormalStrength,varname:node_3023,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_ComponentMask,id:5440,x:31797,y:33012,varname:node_5440,prsc:2,cc1:0,cc2:1,cc3:2,cc4:-1|IN-1925-OUT;n:type:ShaderForge.SFN_Append,id:2488,x:31978,y:33022,varname:node_2488,prsc:2|A-5440-R,B-5440-G;n:type:ShaderForge.SFN_Multiply,id:4860,x:32159,y:33022,varname:node_4860,prsc:2|A-2488-OUT,B-3023-OUT;n:type:ShaderForge.SFN_Append,id:1623,x:32341,y:33022,varname:node_1623,prsc:2|A-4860-OUT,B-5440-B;n:type:ShaderForge.SFN_Add,id:3641,x:32352,y:32614,varname:node_3641,prsc:2|A-1012-RGB,B-6343-OUT;n:type:ShaderForge.SFN_Color,id:1012,x:32080,y:32503,ptovrint:False,ptlb:Add Colour,ptin:_AddColour,varname:node_1012,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:0,c3:0,c4:1;proporder:358-1813-428-1012-2081-5072-3023;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-5990-OUT,spec-358-OUT,gloss-1813-OUT;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.6,max:1;n:type:ShaderForge.SFN_ChannelBlend,id:5990,x:32282,y:32519,varname:node_5990,prsc:2,chbt:0|M-9985-RGB,R-4032-RGB,G-1025-RGB,B-2500-RGB;n:type:ShaderForge.SFN_Tex2d,id:9985,x:31888,y:32447,ptovrint:False,ptlb:RGB mask,ptin:_RGBmask,varname:node_9985,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:e03083d241831a04d81239651d01e8e3,ntxv:0,isnm:False|UVIN-9293-UVOUT;n:type:ShaderForge.SFN_Tex2d,id:4032,x:31889,y:32618,varname:node_4032,prsc:2,tex:23e8b99524aa469469e4711b0650d259,ntxv:0,isnm:False|UVIN-9293-UVOUT,TEX-962-TEX;n:type:ShaderForge.SFN_Tex2dAsset,id:962,x:31452,y:32739,ptovrint:False,ptlb:Texture,ptin:_Texture,varname:node_962,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:23e8b99524aa469469e4711b0650d259,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:1025,x:31889,y:32747,varname:node_1025,prsc:2,tex:23e8b99524aa469469e4711b0650d259,ntxv:0,isnm:False|UVIN-611-UVOUT,TEX-962-TEX;n:type:ShaderForge.SFN_FragmentPosition,id:6920,x:31051,y:32412,varname:node_6920,prsc:2;n:type:ShaderForge.SFN_Append,id:4234,x:31219,y:32412,varname:node_4234,prsc:2|A-6920-X,B-6920-Z;n:type:ShaderForge.SFN_Rotator,id:9293,x:31394,y:32412,varname:node_9293,prsc:2|UVIN-4234-OUT,ANG-9860-OUT;n:type:ShaderForge.SFN_Vector1,id:9860,x:31219,y:32540,varname:node_9860,prsc:2,v1:0.785;n:type:ShaderForge.SFN_Rotator,id:611,x:31594,y:32595,varname:node_611,prsc:2|UVIN-9293-UVOUT,ANG-9860-OUT;n:type:ShaderForge.SFN_Color,id:2500,x:31889,y:32903,ptovrint:False,ptlb:InbetweenColor,ptin:_InbetweenColor,varname:node_2500,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.2205882,c2:0.05020285,c3:0,c4:1;proporder:358-1813-9985-962-2500;pass:END;sub:END;*/
 
-Shader "Shader Forge/TriplanarMapped" {
+Shader "Shader Forge/CapsRoom_Floor" {
     Properties {
         _Metallic ("Metallic", Range(0, 1)) = 0
-        _Gloss ("Gloss", Range(0, 1)) = 0.8
-        _MultiplyColour ("Multiply Colour", Color) = (1,1,1,1)
-        _AddColour ("Add Colour", Color) = (0,0,0,1)
-        _AlbedoTexture ("Albedo Texture", 2D) = "white" {}
-        _NormalMap ("Normal Map", 2D) = "bump" {}
-        _NormalStrength ("Normal Strength", Range(0, 1)) = 0
+        _Gloss ("Gloss", Range(0, 1)) = 0.6
+        _RGBmask ("RGB mask", 2D) = "white" {}
+        _Texture ("Texture", 2D) = "white" {}
+        _InbetweenColor ("InbetweenColor", Color) = (0.2205882,0.05020285,0,1)
     }
     SubShader {
         Tags {
@@ -44,37 +42,32 @@ Shader "Shader Forge/TriplanarMapped" {
             #pragma target 3.0
             uniform float _Metallic;
             uniform float _Gloss;
-            uniform float4 _MultiplyColour;
-            uniform sampler2D _AlbedoTexture; uniform float4 _AlbedoTexture_ST;
-            uniform sampler2D _NormalMap; uniform float4 _NormalMap_ST;
-            uniform float _NormalStrength;
-            uniform float4 _AddColour;
+            uniform sampler2D _RGBmask; uniform float4 _RGBmask_ST;
+            uniform sampler2D _Texture; uniform float4 _Texture_ST;
+            uniform float4 _InbetweenColor;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT;
-                float2 texcoord0 : TEXCOORD0;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
-                float2 uv0 : TEXCOORD0;
-                float2 uv1 : TEXCOORD1;
-                float2 uv2 : TEXCOORD2;
-                float4 posWorld : TEXCOORD3;
-                float3 normalDir : TEXCOORD4;
-                float3 tangentDir : TEXCOORD5;
-                float3 bitangentDir : TEXCOORD6;
-                LIGHTING_COORDS(7,8)
-                UNITY_FOG_COORDS(9)
+                float2 uv1 : TEXCOORD0;
+                float2 uv2 : TEXCOORD1;
+                float4 posWorld : TEXCOORD2;
+                float3 normalDir : TEXCOORD3;
+                float3 tangentDir : TEXCOORD4;
+                float3 bitangentDir : TEXCOORD5;
+                LIGHTING_COORDS(6,7)
+                UNITY_FOG_COORDS(8)
                 #if defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH)
-                    float4 ambientOrLightmapUV : TEXCOORD10;
+                    float4 ambientOrLightmapUV : TEXCOORD9;
                 #endif
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
-                o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 #ifdef LIGHTMAP_ON
@@ -99,14 +92,7 @@ Shader "Shader Forge/TriplanarMapped" {
                 i.normalDir = normalize(i.normalDir);
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 node_4594 = abs(i.normalDir);
-                float3 node_6223 = (node_4594*node_4594);
-                float3 node_9951 = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(i.uv0, _NormalMap)));
-                float3 node_942 = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(i.uv0, _NormalMap)));
-                float3 node_7702 = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(i.uv0, _NormalMap)));
-                float3 node_5440 = (node_6223.r*node_9951.rgb + node_6223.g*node_942.rgb + node_6223.b*node_7702.rgb).rgb;
-                float3 normalLocal = float3((float2(node_5440.r,node_5440.g)*_NormalStrength),node_5440.b);
-                float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
+                float3 normalDirection = i.normalDir;
                 float3 viewReflectDirection = reflect( -viewDirection, normalDirection );
                 float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
                 float3 lightColor = _LightColor0.rgb;
@@ -166,13 +152,23 @@ Shader "Shader Forge/TriplanarMapped" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
-                float2 node_6067 = float2(i.posWorld.g,i.posWorld.b);
-                float4 node_4557 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_6067, _AlbedoTexture));
-                float2 node_3843 = float2(i.posWorld.r,i.posWorld.b);
-                float4 node_3362 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_3843, _AlbedoTexture));
-                float2 node_4248 = float2(i.posWorld.r,i.posWorld.g);
-                float4 node_6729 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_4248, _AlbedoTexture));
-                float3 diffuseColor = (_AddColour.rgb+((node_6223.r*node_4557.rgb + node_6223.g*node_3362.rgb + node_6223.b*node_6729.rgb)*_MultiplyColour.rgb)); // Need this for specular when using metallic
+                float node_9860 = 0.785;
+                float node_9293_ang = node_9860;
+                float node_9293_spd = 1.0;
+                float node_9293_cos = cos(node_9293_spd*node_9293_ang);
+                float node_9293_sin = sin(node_9293_spd*node_9293_ang);
+                float2 node_9293_piv = float2(0.5,0.5);
+                float2 node_9293 = (mul(float2(i.posWorld.r,i.posWorld.b)-node_9293_piv,float2x2( node_9293_cos, -node_9293_sin, node_9293_sin, node_9293_cos))+node_9293_piv);
+                float4 _RGBmask_var = tex2D(_RGBmask,TRANSFORM_TEX(node_9293, _RGBmask));
+                float4 node_4032 = tex2D(_Texture,TRANSFORM_TEX(node_9293, _Texture));
+                float node_611_ang = node_9860;
+                float node_611_spd = 1.0;
+                float node_611_cos = cos(node_611_spd*node_611_ang);
+                float node_611_sin = sin(node_611_spd*node_611_ang);
+                float2 node_611_piv = float2(0.5,0.5);
+                float2 node_611 = (mul(node_9293-node_611_piv,float2x2( node_611_cos, -node_611_sin, node_611_sin, node_611_cos))+node_611_piv);
+                float4 node_1025 = tex2D(_Texture,TRANSFORM_TEX(node_611, _Texture));
+                float3 diffuseColor = (_RGBmask_var.rgb.r*node_4032.rgb + _RGBmask_var.rgb.g*node_1025.rgb + _RGBmask_var.rgb.b*_InbetweenColor.rgb); // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -246,34 +242,29 @@ Shader "Shader Forge/TriplanarMapped" {
             #pragma target 3.0
             uniform float _Metallic;
             uniform float _Gloss;
-            uniform float4 _MultiplyColour;
-            uniform sampler2D _AlbedoTexture; uniform float4 _AlbedoTexture_ST;
-            uniform sampler2D _NormalMap; uniform float4 _NormalMap_ST;
-            uniform float _NormalStrength;
-            uniform float4 _AddColour;
+            uniform sampler2D _RGBmask; uniform float4 _RGBmask_ST;
+            uniform sampler2D _Texture; uniform float4 _Texture_ST;
+            uniform float4 _InbetweenColor;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT;
-                float2 texcoord0 : TEXCOORD0;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
-                float2 uv0 : TEXCOORD0;
-                float2 uv1 : TEXCOORD1;
-                float2 uv2 : TEXCOORD2;
-                float4 posWorld : TEXCOORD3;
-                float3 normalDir : TEXCOORD4;
-                float3 tangentDir : TEXCOORD5;
-                float3 bitangentDir : TEXCOORD6;
-                LIGHTING_COORDS(7,8)
-                UNITY_FOG_COORDS(9)
+                float2 uv1 : TEXCOORD0;
+                float2 uv2 : TEXCOORD1;
+                float4 posWorld : TEXCOORD2;
+                float3 normalDir : TEXCOORD3;
+                float3 tangentDir : TEXCOORD4;
+                float3 bitangentDir : TEXCOORD5;
+                LIGHTING_COORDS(6,7)
+                UNITY_FOG_COORDS(8)
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
-                o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
@@ -290,14 +281,7 @@ Shader "Shader Forge/TriplanarMapped" {
                 i.normalDir = normalize(i.normalDir);
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 node_4594 = abs(i.normalDir);
-                float3 node_6223 = (node_4594*node_4594);
-                float3 node_9951 = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(i.uv0, _NormalMap)));
-                float3 node_942 = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(i.uv0, _NormalMap)));
-                float3 node_7702 = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(i.uv0, _NormalMap)));
-                float3 node_5440 = (node_6223.r*node_9951.rgb + node_6223.g*node_942.rgb + node_6223.b*node_7702.rgb).rgb;
-                float3 normalLocal = float3((float2(node_5440.r,node_5440.g)*_NormalStrength),node_5440.b);
-                float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
+                float3 normalDirection = i.normalDir;
                 float3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz, _WorldSpaceLightPos0.xyz - i.posWorld.xyz,_WorldSpaceLightPos0.w));
                 float3 lightColor = _LightColor0.rgb;
                 float3 halfDirection = normalize(viewDirection+lightDirection);
@@ -316,13 +300,23 @@ Shader "Shader Forge/TriplanarMapped" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
-                float2 node_6067 = float2(i.posWorld.g,i.posWorld.b);
-                float4 node_4557 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_6067, _AlbedoTexture));
-                float2 node_3843 = float2(i.posWorld.r,i.posWorld.b);
-                float4 node_3362 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_3843, _AlbedoTexture));
-                float2 node_4248 = float2(i.posWorld.r,i.posWorld.g);
-                float4 node_6729 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_4248, _AlbedoTexture));
-                float3 diffuseColor = (_AddColour.rgb+((node_6223.r*node_4557.rgb + node_6223.g*node_3362.rgb + node_6223.b*node_6729.rgb)*_MultiplyColour.rgb)); // Need this for specular when using metallic
+                float node_9860 = 0.785;
+                float node_9293_ang = node_9860;
+                float node_9293_spd = 1.0;
+                float node_9293_cos = cos(node_9293_spd*node_9293_ang);
+                float node_9293_sin = sin(node_9293_spd*node_9293_ang);
+                float2 node_9293_piv = float2(0.5,0.5);
+                float2 node_9293 = (mul(float2(i.posWorld.r,i.posWorld.b)-node_9293_piv,float2x2( node_9293_cos, -node_9293_sin, node_9293_sin, node_9293_cos))+node_9293_piv);
+                float4 _RGBmask_var = tex2D(_RGBmask,TRANSFORM_TEX(node_9293, _RGBmask));
+                float4 node_4032 = tex2D(_Texture,TRANSFORM_TEX(node_9293, _Texture));
+                float node_611_ang = node_9860;
+                float node_611_spd = 1.0;
+                float node_611_cos = cos(node_611_spd*node_611_ang);
+                float node_611_sin = sin(node_611_spd*node_611_ang);
+                float2 node_611_piv = float2(0.5,0.5);
+                float2 node_611 = (mul(node_9293-node_611_piv,float2x2( node_611_cos, -node_611_sin, node_611_sin, node_611_cos))+node_611_piv);
+                float4 node_1025 = tex2D(_Texture,TRANSFORM_TEX(node_611, _Texture));
+                float3 diffuseColor = (_RGBmask_var.rgb.r*node_4032.rgb + _RGBmask_var.rgb.g*node_1025.rgb + _RGBmask_var.rgb.b*_InbetweenColor.rgb); // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -384,12 +378,11 @@ Shader "Shader Forge/TriplanarMapped" {
             #pragma target 3.0
             uniform float _Metallic;
             uniform float _Gloss;
-            uniform float4 _MultiplyColour;
-            uniform sampler2D _AlbedoTexture; uniform float4 _AlbedoTexture_ST;
-            uniform float4 _AddColour;
+            uniform sampler2D _RGBmask; uniform float4 _RGBmask_ST;
+            uniform sampler2D _Texture; uniform float4 _Texture_ST;
+            uniform float4 _InbetweenColor;
             struct VertexInput {
                 float4 vertex : POSITION;
-                float3 normal : NORMAL;
                 float2 texcoord1 : TEXCOORD1;
                 float2 texcoord2 : TEXCOORD2;
             };
@@ -398,35 +391,39 @@ Shader "Shader Forge/TriplanarMapped" {
                 float2 uv1 : TEXCOORD0;
                 float2 uv2 : TEXCOORD1;
                 float4 posWorld : TEXCOORD2;
-                float3 normalDir : TEXCOORD3;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
-                o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.pos = UnityMetaVertexPosition(v.vertex, v.texcoord1.xy, v.texcoord2.xy, unity_LightmapST, unity_DynamicLightmapST );
                 return o;
             }
             float4 frag(VertexOutput i) : SV_Target {
-                i.normalDir = normalize(i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 normalDirection = i.normalDir;
                 UnityMetaInput o;
                 UNITY_INITIALIZE_OUTPUT( UnityMetaInput, o );
                 
                 o.Emission = 0;
                 
-                float3 node_4594 = abs(i.normalDir);
-                float3 node_6223 = (node_4594*node_4594);
-                float2 node_6067 = float2(i.posWorld.g,i.posWorld.b);
-                float4 node_4557 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_6067, _AlbedoTexture));
-                float2 node_3843 = float2(i.posWorld.r,i.posWorld.b);
-                float4 node_3362 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_3843, _AlbedoTexture));
-                float2 node_4248 = float2(i.posWorld.r,i.posWorld.g);
-                float4 node_6729 = tex2D(_AlbedoTexture,TRANSFORM_TEX(node_4248, _AlbedoTexture));
-                float3 diffColor = (_AddColour.rgb+((node_6223.r*node_4557.rgb + node_6223.g*node_3362.rgb + node_6223.b*node_6729.rgb)*_MultiplyColour.rgb));
+                float node_9860 = 0.785;
+                float node_9293_ang = node_9860;
+                float node_9293_spd = 1.0;
+                float node_9293_cos = cos(node_9293_spd*node_9293_ang);
+                float node_9293_sin = sin(node_9293_spd*node_9293_ang);
+                float2 node_9293_piv = float2(0.5,0.5);
+                float2 node_9293 = (mul(float2(i.posWorld.r,i.posWorld.b)-node_9293_piv,float2x2( node_9293_cos, -node_9293_sin, node_9293_sin, node_9293_cos))+node_9293_piv);
+                float4 _RGBmask_var = tex2D(_RGBmask,TRANSFORM_TEX(node_9293, _RGBmask));
+                float4 node_4032 = tex2D(_Texture,TRANSFORM_TEX(node_9293, _Texture));
+                float node_611_ang = node_9860;
+                float node_611_spd = 1.0;
+                float node_611_cos = cos(node_611_spd*node_611_ang);
+                float node_611_sin = sin(node_611_spd*node_611_ang);
+                float2 node_611_piv = float2(0.5,0.5);
+                float2 node_611 = (mul(node_9293-node_611_piv,float2x2( node_611_cos, -node_611_sin, node_611_sin, node_611_cos))+node_611_piv);
+                float4 node_1025 = tex2D(_Texture,TRANSFORM_TEX(node_611, _Texture));
+                float3 diffColor = (_RGBmask_var.rgb.r*node_4032.rgb + _RGBmask_var.rgb.g*node_1025.rgb + _RGBmask_var.rgb.b*_InbetweenColor.rgb);
                 float specularMonochrome;
                 float3 specColor;
                 diffColor = DiffuseAndSpecularFromMetallic( diffColor, _Metallic, specColor, specularMonochrome );
