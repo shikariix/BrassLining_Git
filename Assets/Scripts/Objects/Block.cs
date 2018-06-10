@@ -43,6 +43,8 @@ public class Block : MonoBehaviour {
         player = GameObject.FindWithTag("Player");
         beam = GameObject.FindWithTag("Beam").GetComponent<Beam>();
         grid = GameObject.FindWithTag("BlockGrid").GetComponent<BlockGrid>();
+
+
         Transform[] t = GetComponentsInChildren<Transform>();
         meshTransform = t[1];
 
@@ -134,7 +136,16 @@ public class Block : MonoBehaviour {
 
 		playerAnimator.SetTrigger("PushBlock");
 
-		if (!grid.borders.Contains(newPosition)) {
+        //check if any of the vectors in the borders match the new position
+        bool canMove = true;
+        foreach (Vector3 v in grid.borders) {
+            if (newPosition == v) {
+                canMove = false;
+                break;
+            }
+        }
+
+        if (canMove) {
             isMoving = true;
             yield return new WaitForSeconds(0.5f);
             isMoving = false;
