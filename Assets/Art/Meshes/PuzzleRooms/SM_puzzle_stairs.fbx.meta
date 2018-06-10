@@ -1,44 +1,16 @@
 fileFormatVersion: 2
-guid: 7c3f5a99da3e20c438c052a3fa5106b4
-timeCreated: 1528649470
+guid: 51a633172902e9b49b40c650d554b501
+timeCreated: 1528651370
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: pCube23
-    100002: pCube24
-    100004: pCube25
-    100006: pCube26
-    100008: pCube27
-    100010: pCube28
-    100012: //RootNode
-    400000: pCube23
-    400002: pCube24
-    400004: pCube25
-    400006: pCube26
-    400008: pCube27
-    400010: pCube28
-    400012: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2300000: pCube23
-    2300002: pCube24
-    2300004: pCube25
-    2300006: pCube26
-    2300008: pCube27
-    2300010: pCube28
-    3300000: pCube23
-    3300002: pCube24
-    3300004: pCube25
-    3300006: pCube26
-    3300008: pCube27
-    3300010: pCube28
-    4300000: pCube28
-    4300002: pCube27
-    4300004: pCube26
-    4300006: pCube25
-    4300008: pCube24
-    4300010: pCube23
-    7400000: Take 001
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: puzzle_stairs
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -95,7 +67,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
