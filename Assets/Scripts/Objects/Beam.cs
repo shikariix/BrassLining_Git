@@ -56,6 +56,11 @@ public class Beam : MonoBehaviour {
                 target.HitTarget();
 
                 loopActive = false;
+            } else if (Physics.Raycast(lastLaserPosition, laserDirection, out hit, laserDistance) && hit.collider.tag == "BlockSides") {
+                laserReflected++;
+                vertexCounter++;
+                laserRenderer.positionCount = vertexCounter;
+                laserRenderer.SetPosition(vertexCounter - 1, hit.point);
             }
             else {
                 laserReflected++;
