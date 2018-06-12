@@ -24,7 +24,7 @@ public class Beam : MonoBehaviour {
     }
 
     void DrawLaser() {
-        
+
         int laserReflected = 1; //How many times it got reflected
         int vertexCounter = 1; //How many line segments are there
         bool loopActive = true; //Is the reflecting loop active?
@@ -38,6 +38,7 @@ public class Beam : MonoBehaviour {
             RaycastHit hit;
 
             if (Physics.Raycast(lastLaserPosition, laserDirection, out hit, laserDistance) && hit.collider.tag == "MirrorBlock") {
+                //GetComponent<AudioSource>().Play();
                 laserReflected++;
                 vertexCounter += 2;
                 laserRenderer.positionCount = vertexCounter;

@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
 
+    public void MainMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void StartGame() {
         SceneManager.LoadScene("Captains_Room");
     }
@@ -20,13 +24,25 @@ public class SceneController : MonoBehaviour {
     public void Puzzle_1() {
         SceneManager.LoadScene("Puzzle_1");
     }
-    
-    public void ExitGame() {
-        Application.Quit();
+
+    public void Puzzle_2() {
+        SceneManager.LoadScene("Puzzle_2");
     }
 
-    public void MainMenu() {
-        SceneManager.LoadScene("Menu");
+    public void Puzzle_3() {
+        SceneManager.LoadScene("Puzzle_3");
+    }
+
+    public void Credits() {
+        SceneManager.LoadScene("Credits");
+    }
+    
+    public void Captains_Room_End() {
+        SceneManager.LoadScene("Captains_Room_End");
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 
     void Update() {

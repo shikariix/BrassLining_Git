@@ -23,6 +23,7 @@ public class Target : MonoBehaviour {
     }
 
     void RemoveBarrier() {
+        GetComponent<AudioSource>().Play();
         elevator.OpenFence();
     }
 }
