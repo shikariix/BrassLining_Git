@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
+    
 
     public void MainMenu() {
         SceneManager.LoadScene("MainMenu");
@@ -43,15 +44,5 @@ public class SceneController : MonoBehaviour {
 
     public void ExitGame() {
         Application.Quit();
-    }
-
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            PauseGame();
-        }
-    }
-
-    public void PauseGame() {
-        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
     }
 }
