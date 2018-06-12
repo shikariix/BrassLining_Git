@@ -57,7 +57,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_ForwardAmount = move.z;
 
 			//JOSIEN'S CODE
-			m_Rigidbody.velocity = transform.forward * move.z * m_MoveSpeedMultiplier;
+			float yVelocity = 0;
+			if (!m_IsGrounded) {
+				yVelocity = m_GravityMultiplier;
+			}
+			m_Rigidbody.velocity = transform.forward * move.z * m_MoveSpeedMultiplier + yVelocity * -transform.up;
 			//END OF JOSIEN'S CODE
 
 			ApplyExtraTurnRotation();
