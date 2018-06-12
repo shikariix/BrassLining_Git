@@ -17,6 +17,7 @@ public class Elevator : MonoBehaviour {
         }
     }
     IEnumerator ChangeScene() {
+        GetComponent<AudioSource>().Play();
         fadeToBlack.Play("FadeToBlack");
         yield return new WaitForSeconds(1.5f);
         sceneController.SendMessage(targetScene);
