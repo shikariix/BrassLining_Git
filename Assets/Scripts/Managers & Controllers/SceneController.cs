@@ -21,6 +21,10 @@ public class SceneController : MonoBehaviour {
     public void Library() {
         SceneManager.LoadScene("Library");
     }
+    
+    public void Kitchen() {
+        SceneManager.LoadScene("Kitchen");
+    }
 
     public void Puzzle_1() {
         SceneManager.LoadScene("Puzzle_1");
